@@ -21,8 +21,6 @@ const removeSessionUser = () => ({
 
 
 // You need to call the API to login then set the session user from the response, so add a thunk action for the POST / api / session.
-
-
 export const getSessionUser = (user) => async (dispatch) => {
   // Make sure to use the custom fetch function from frontend / src / store / csrf.js.
   // The POST / api / session route expects the request body to have a key of credential with an existing username or email and a key of password.
@@ -32,22 +30,20 @@ export const getSessionUser = (user) => async (dispatch) => {
     body: JSON.stringify({
       credential, password
     })
-
   });
-
   // After the response from the AJAX call comes back, dispatch the action for setting the session user to the response's data.
+  dispatch(setSessionUser(res.data.user));
+  return res;
+};
+
+
+// Add a thunk action in frontend / src / store / session.js that will call the GET / api / session and dispatch the action to set the session user with the data from the response.
+export const restoreSession = (user) => async (dispatch) => {
+  const res = await fetch('/api/session');
 
   dispatch(setSessionUser(res.data.user));
   return res;
-
 }
-
-
-
-
-// Export the login thunk action, and export the reducer as the default export.
-
-
 
 
 const initialState = { user: null };
