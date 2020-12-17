@@ -1,8 +1,8 @@
 const { validationResult } = require('express-validator');
-const { noExtendLeft } = require('sequelize/types/lib/operators');
 
 
-const handleValidationErrors = () => {
+
+const handleValidationErrors = (req, _res, next) => {
   const validationErrors = validationResult(req);
 
   if (!validationErrors.isEmpty()) {
