@@ -28,7 +28,6 @@ const LoginFormPage = () => {
       .catch((res) => {
         if (res.data && res.data.errors) setErrors(res.data.errors);
       });
-
   }
 
   return (

@@ -36,14 +36,28 @@ export const getSessionUser = (user) => async (dispatch) => {
   return res;
 };
 
-
 // Add a thunk action in frontend / src / store / session.js that will call the GET / api / session and dispatch the action to set the session user with the data from the response.
 export const restoreSession = (user) => async (dispatch) => {
   const res = await fetch('/api/session');
-
   dispatch(setSessionUser(res.data.user));
   return res;
 }
+
+// You will use the POST / api / users backend route to signup a user.
+//add a signup thunk action that will hit the signup backend route with username, email, and password inputs.After the response from the AJAX call comes back, dispatch the action for setting the session user to the response's data.
+export const signUp = (user) => async (dispatch) => {
+  const { username, email, password } = user;
+  const res = await fetch('/api/users', {
+    method: 'POST',
+    body: JSON.stringify({
+      username, email, password
+    })
+  })
+  dispatch(setSessionUser(res.data.user));
+  return res;
+
+}
+
 
 
 const initialState = { user: null };
