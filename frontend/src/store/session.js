@@ -56,10 +56,18 @@ export const signUp = (user) => async (dispatch) => {
 
 /********************TO DO NEXT ***********************/
 
+// You will use the DELETE / api / session backend route to logout a user.
 // add a logout thunk action that will hit the logout backend route.After the response from the AJAX call comes back, dispatch the action for removing the session user to the response's data.
-// Export the logout thunk action.
 
 
+export const logout = () => async (dispatch) => {
+
+  const res = await fetch('/api/session', {
+    method: 'DELETE'
+  });
+  dispatch(removeSessionUser());
+  return res;
+};
 
 
 
