@@ -1,6 +1,5 @@
 // This file will contain all the actions specific to the session user's information and the session user's Redux reducer.
 
-
 import { fetch } from "./csrf";
 
 const SET_SESSION_USER = '/session/SET_SESSION_USER';
@@ -11,14 +10,12 @@ const REMOVE_SESSION_USER = 'session/REMOVE_SESSION_USER';
 const setSessionUser = (user) => ({
   type: SET_SESSION_USER,
   payload: user
-})
+});
 
 // and another that will remove the session user. Their types should be extracted as a constant and used by the action creator and the session reducer.
 const removeSessionUser = () => ({
   type: REMOVE_SESSION_USER,
-
 });
-
 
 // You need to call the API to login then set the session user from the response, so add a thunk action for the POST / api / session.
 export const getSessionUser = (user) => async (dispatch) => {
@@ -55,8 +52,14 @@ export const signUp = (user) => async (dispatch) => {
   })
   dispatch(setSessionUser(res.data.user));
   return res;
+};
 
-}
+/********************TO DO NEXT ***********************/
+
+// add a logout thunk action that will hit the logout backend route.After the response from the AJAX call comes back, dispatch the action for removing the session user to the response's data.
+// Export the logout thunk action.
+
+
 
 
 
