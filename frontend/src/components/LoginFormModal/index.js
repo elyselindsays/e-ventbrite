@@ -7,7 +7,7 @@ function LoginFormModal() {
 
   return (
     <>
-      <button onClick={() => { setShowModal(true); console.log(showModal) }}>Log In</button>
+      <button onClick={() => setShowModal(true)}>Log In</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <LoginForm />
