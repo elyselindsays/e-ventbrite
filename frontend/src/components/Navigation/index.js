@@ -1,14 +1,13 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
+import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 
-
-const Navigation = ({ isLoaded }) => {
-
+function Navigation({ isLoaded }) {
   const sessionUser = useSelector(state => state.session.user);
 
-  // It should only contain navigation links to the login and signup routes when there is no session user and a logout button when there is.
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
@@ -17,27 +16,20 @@ const Navigation = ({ isLoaded }) => {
   } else {
     sessionLinks = (
       <>
-        <NavLink to='/login'>Login</NavLink>
-        <NavLink to='/signup'>Sign Up</NavLink>
+        <LoginFormModal />
+        <NavLink to="/signup">Sign Up</NavLink>
       </>
     );
   }
 
   return (
-    // Your navigation should render an unordered list with a navigation link to the home page.
     <ul>
       <li>
-        <NavLink exact to="/" >Home</NavLink>
+        <NavLink exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
       </li>
     </ul>
-
-  )
-
-
-};
-
-
-
+  );
+}
 
 export default Navigation;

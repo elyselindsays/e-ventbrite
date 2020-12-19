@@ -7,18 +7,18 @@ const REMOVE_SESSION_USER = 'session/REMOVE_SESSION_USER';
 
 // Create two POJO action creators.
 // One that will set the session user in the session slice of state to the action creator's input parameter, 
-const setSessionUser = (user) => ({
+const setUser = (user) => ({
   type: SET_SESSION_USER,
   payload: user
 });
 
 // and another that will remove the session user. Their types should be extracted as a constant and used by the action creator and the session reducer.
-const removeSessionUser = () => ({
+const removeUser = () => ({
   type: REMOVE_SESSION_USER,
 });
 
 // You need to call the API to login then set the session user from the response, so add a thunk action for the POST / api / session.
-export const getSessionUser = (user) => async (dispatch) => {
+export const login = (user) => async (dispatch) => {
   // Make sure to use the custom fetch function from frontend / src / store / csrf.js.
   // The POST / api / session route expects the request body to have a key of credential with an existing username or email and a key of password.
   const { credential, password } = user;
@@ -29,14 +29,14 @@ export const getSessionUser = (user) => async (dispatch) => {
     })
   });
   // After the response from the AJAX call comes back, dispatch the action for setting the session user to the response's data.
-  dispatch(setSessionUser(res.data.user));
+  dispatch(setUser(res.data.user));
   return res;
 };
 
 // Add a thunk action in frontend / src / store / session.js that will call the GET / api / session and dispatch the action to set the session user with the data from the response.
-export const restoreSession = (user) => async (dispatch) => {
+export const restoreUser = (user) => async (dispatch) => {
   const res = await fetch('/api/session');
-  dispatch(setSessionUser(res.data.user));
+  dispatch(setUser(res.data.user));
   return res;
 }
 
@@ -50,7 +50,7 @@ export const signUp = (user) => async (dispatch) => {
       username, email, password
     })
   })
-  dispatch(setSessionUser(res.data.user));
+  dispatch(setUser(res.data.user));
   return res;
 };
 
@@ -65,7 +65,7 @@ export const logout = () => async (dispatch) => {
   const res = await fetch('/api/session', {
     method: 'DELETE'
   });
-  dispatch(removeSessionUser());
+  dispatch(removeUser());
   return res;
 };
 
