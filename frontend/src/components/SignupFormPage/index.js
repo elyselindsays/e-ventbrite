@@ -34,6 +34,8 @@ const SignupFormPage = () => {
     }
 
     return setErrors(['Passwords must match.'])
+
+    // TODO FIGURE OUT REDIRECT
   };
 
 

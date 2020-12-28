@@ -18,10 +18,10 @@ const removeUser = () => ({
 });
 
 // You need to call the API to login then set the session user from the response, so add a thunk action for the POST / api / session.
-export const login = (user) => async (dispatch) => {
+export const login = ({ credential, password }) => async (dispatch) => {
   // Make sure to use the custom fetch function from frontend / src / store / csrf.js.
   // The POST / api / session route expects the request body to have a key of credential with an existing username or email and a key of password.
-  const { credential, password } = user;
+
   const res = await fetch(`/api/session`, {
     method: 'POST',
     body: JSON.stringify({

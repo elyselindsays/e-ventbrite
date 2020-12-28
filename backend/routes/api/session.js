@@ -42,7 +42,7 @@ router.post('/', validateLogin, asyncHandler(async (req, res, next) => {
   })
 }));
 
-
+// Restore Session User
 router.get('/', restoreUser, (req, res) => {
   const { user } = req;
   if (user) {
