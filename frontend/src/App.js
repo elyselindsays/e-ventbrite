@@ -4,6 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import Event, { EventBrowse } from './components/Events';
+import EventPage from "./components/EventPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +21,12 @@ function App() {
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path='/events'>
+            <EventBrowse />
+          </Route>
+          <Route path='/events/page'>
+            <EventPage />
           </Route>
         </Switch>
       )}

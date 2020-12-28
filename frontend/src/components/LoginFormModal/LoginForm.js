@@ -16,7 +16,7 @@ function LoginForm() {
         if (res.data && res.data.errors) setErrors(res.data.errors);
       }
     );
-    //TODO FIGURE OUT REDIRECT
+
   };
 
   return (
