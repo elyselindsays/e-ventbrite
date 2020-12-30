@@ -4,11 +4,18 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     date: DataTypes.DATE,
     description: DataTypes.TEXT,
-    category: DataTypes.STRING,
     image: DataTypes.STRING
   }, {});
-  Event.associate = function(models) {
-    // associations can be defined here
+  Event.associate = function (models) {
+
+
+    const columnMapping = {
+      through: 'Ticket',
+      otherKey: 'userId',
+      foreignKey: 'eventId'
+    }
+
+    Event.belongsToMany(models.User, columnMapping)
   };
   return Event;
 };

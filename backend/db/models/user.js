@@ -47,9 +47,21 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
+
+
+
   User.associate = function (models) {
-    // associations can be defined here
+    const columnMapping = {
+      through: 'Ticket',
+      otherKey: 'eventId',
+      foreignKey: 'userId'
+    }
+
+    User.belongsToMany(models.Event, columnMapping)
   };
+
+
+
   User.prototype.toSafeObject = function () {
     const { id, username, email } = this;
     return { id, username, email };
