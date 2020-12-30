@@ -22,12 +22,13 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path='/events'>
-            <EventBrowse />
-          </Route>
-          <Route path='/event-page'>
+          <Route path={`/events/:id`}>
             <EventPage />
           </Route>
+          <Route exact path='/events'>
+            <EventBrowse />
+          </Route>
+
         </>
       )}
     </>

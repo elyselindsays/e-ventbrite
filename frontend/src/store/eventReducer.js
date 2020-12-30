@@ -29,6 +29,11 @@ export const getEvents = () => async (dispatch) => {
 
 };
 
+// export const getOneEvent = (id) => async (dispatch) => {
+//   const res = await fetch(`/api/events/${id}`);
+//   dispatch(setEvents(res.data));
+// }
+
 
 
 const eventReducer = (state = [], action) => {

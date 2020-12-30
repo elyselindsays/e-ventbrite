@@ -1,78 +1,63 @@
 
 import { useSelector, useDispatch } from 'react-redux';
-
-
-/*** what needs to happen for my single event page ******/
-/****
- * 
- * 
- * make call to backend with thunk
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- *  */
-
+import { useParams } from 'react-router-dom';
 
 const EventPage = () => {
 
+  // useParams to get id from state
+  // setup route to eventpage
+  // find the one with the right id
+  // render that
 
-  const event = useSelector((state) => state.event);
+  const eventState = useSelector((state) => state.event);
+
+  const { id } = useParams();
+
+  const foundEvent = eventState.find(ev => ev.id === Number(id))
 
 
-  const dispatch = useDispatch();
+  console.log(eventState);
+  console.log(id);
 
-
+  // TO-DO: function that "finds" the object in the eventState array where the id equals the id param
 
 
   return (
-
     <>
       <h1>Event Page</h1>
-
-
       <div className='eventHero'>
-        <div className='photoBlock'>
-          <img className='photo' alt='event'></img>
+
+        <div key={foundEvent.id} className='event-page'>
+          <div className='photoBlock'>
+            <img src={foundEvent.image} className='photo' alt='event'></img>
+          </div>
+          <div>
+            <h1 className='eventTitle'>{foundEvent.title}</h1>
+          </div>
+          <div className='dateBlock'>
+            <div id='date'>{foundEvent.date}</div>
+            <div id='time'>{foundEvent.date}</div>
+          </div>
         </div>
-        <div>
-          <h1 className='eventTitle'>{ }</h1>
+
+        {/* Register Button */}
+        <div className='registerButton'>
+          <button>Register</button>
         </div>
-        <div className='dateBlock'>
-          <div id='date'>date</div>
-          <div id='time'>time</div>
+
+        {/* Description Block */}
+        <div className="descriptionBox">
+          <h3>About this Event</h3>
+          <p>{foundEvent.description}</p>
         </div>
-        <div>
-          <p id='price'></p>
+
+
+
+        {/* Tags */}
+        <div className='tagsContainer'>
+          {/* tag links */}
         </div>
       </div>
-
-      {/* Register Button */}
-      <div className='registerButton'>
-        <button>Register</button>
-      </div>
-      {/* Like Button */}
-      <div className='likeButtonContainer'>
-        <button className='likeButton'>Like</button>
-      </div>
-
-
-      {/* Description Block */}
-      <div className="descriptionBox">
-        <h3>About this Event</h3>
-        <p>Info</p>
-      </div>
-
-
-
-      {/* Tags */}
-      <div className='tagsContainer'>
-        {/* tag links */}
-      </div>
-
 
 
 
