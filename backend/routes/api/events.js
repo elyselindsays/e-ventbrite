@@ -13,10 +13,20 @@ router.get(`/`, asyncHandler(async (req, res) => {
 
   const events = await Event.findAll();
 
-
   res.json(events);
 
-}))
+}));
+
+
+// router.get(`/:id`, asyncHandler(async (req, res) => {
+//   const { id } = req.params;
+//   const event = await Event.findOne({
+//     where: {
+//       id: id
+//     }
+//   });
+//   res.json(event);
+// }))
 
 
 
