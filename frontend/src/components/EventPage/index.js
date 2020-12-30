@@ -1,6 +1,7 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const EventPage = () => {
 
@@ -42,7 +43,9 @@ const EventPage = () => {
 
         {/* Register Button */}
         <div className='registerButton'>
-          <button>Register</button>
+          <Link to={`/events/${foundEvent.id}/register`}>
+            <button>Register</button>
+          </Link>
         </div>
 
         {/* Description Block */}
