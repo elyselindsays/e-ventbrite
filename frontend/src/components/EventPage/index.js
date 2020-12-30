@@ -1,25 +1,39 @@
-import { useDispatch } from 'react-redux';
+
+import { useSelector, useDispatch } from 'react-redux';
 
 
+/*** what needs to happen for my single event page ******/
+/****
+ * 
+ * 
+ * make call to backend with thunk
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  */
 
 
 const EventPage = () => {
 
 
+  const event = useSelector((state) => state.event);
+
+
   const dispatch = useDispatch();
 
-  const handleClick = (e) => {
-    /*********** TO DO 5 *************/
-    // dispatch a thunk
-    // dispatch(THUNKGOESHERE(e.target.id))
-  };
+
+
 
   return (
 
     <>
       <h1>Event Page</h1>
 
-      {/* event hero:  */}
+
       <div className='eventHero'>
         <div className='photoBlock'>
           <img className='photo' alt='event'></img>
@@ -28,8 +42,8 @@ const EventPage = () => {
           <h1 className='eventTitle'>{ }</h1>
         </div>
         <div className='dateBlock'>
-          <div id='date'></div>
-          <div id='time'></div>
+          <div id='date'>date</div>
+          <div id='time'>time</div>
         </div>
         <div>
           <p id='price'></p>
@@ -39,6 +53,10 @@ const EventPage = () => {
       {/* Register Button */}
       <div className='registerButton'>
         <button>Register</button>
+      </div>
+      {/* Like Button */}
+      <div className='likeButtonContainer'>
+        <button className='likeButton'>Like</button>
       </div>
 
 

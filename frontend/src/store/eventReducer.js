@@ -1,3 +1,5 @@
+import { fetch } from './csrf';
+
 /***************
 Write your initial state []
 
@@ -20,8 +22,11 @@ const setEvents = (payload) => ({
 
 export const getEvents = () => async (dispatch) => {
   const res = await fetch(`/api/events`);
-  const events = await res.json();
-  dispatch(setEvents(events))
+
+  console.log(`${res}******************************`)
+  console.log(Array.isArray(res.data));
+  dispatch(setEvents(res.data));
+
 };
 
 
@@ -29,7 +34,9 @@ export const getEvents = () => async (dispatch) => {
 const eventReducer = (state = [], action) => {
   switch (action.type) {
     case SET_EVENTS:
-      return action.payload
+      console.log(action.payload)
+      return [...action.payload]
+
     default:
       return state;
   }

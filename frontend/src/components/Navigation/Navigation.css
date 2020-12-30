@@ -1,0 +1,16 @@
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 2px solid mintcream;
+}
+
+
+.far {
+  width: 30px;
+}
+
+.far:hover {
+  background-color: palegreen;
+}
