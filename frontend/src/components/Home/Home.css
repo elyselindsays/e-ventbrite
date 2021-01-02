@@ -1,0 +1,46 @@
+#home-page-container {
+  /* background-color: aquamarine; */
+  height: 400px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  
+}
+
+.home-card {
+  display: flex;
+align-self: flex-end;
+width: 100%;
+  
+}
+
+
+
+
+.home-photo-container {
+  width: 650px;
+
+}
+
+
+#home-page-container img {
+  width: 100%;
+}
+/* 
+#home-page-overlay {
+  height: 400px;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#home-page-overlay h1 {
+  color: white;
+  font-size: 48px;
+  margin-right: 50px;
+} */

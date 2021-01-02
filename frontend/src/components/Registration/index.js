@@ -1,43 +1,50 @@
-
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
+import { register } from '../../store/eventReducer'
 
 const Registration = () => {
 
-  /*
-   * 
-   * h1 Checkout
-   * Ticket
-   * General Admission                Free
-   *
-   * Contact Information
-   * first name
-   * last name
-   * email address
-   * *****PERSIST STATE******
-   * 
-   * REGISTER BUTTON
-   * 
-   * register button ONCLICK/ONSUBMIT
-   * E.PREVENTDEFAULT
-   * 
-   * RETURN OR RENDER A thanks for your order!!
-   * 
-   * 
-   * 
-  */
+  const eventState = useSelector((state) => state.event);
+  const userState = useSelector((state) => state.session);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const { id } = useParams();
+  const foundEvent = eventState.find(ev => ev.id === Number(id))
+
+  console.log(userState)
+  console.log(foundEvent)
+  console.log(userState.user.id);
+  console.log(foundEvent.id)
+
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    /******************* THIS MIGHT BE WRONG ***********/
+    const payload = {
+      eventId: foundEvent.id,
+      userId: userState.user.id
+    }
+    const ticket = await dispatch(register(payload));
+    // if (ticket) {
+    //   history.push(`/events/confirmation`)
+    // }
+  };
+
+  // const toRender = 
+
 
 
   return (
     <>
       <div>
-
-        {/* TO-DO: PLUG IN EVENT NAME */}
-
-
         <form
-        // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           <h1>Checkout</h1>
-          <h2>event name</h2>
+          <h2>{foundEvent.title}</h2>
           <div className='ticket-info-container'>
             <h3>Ticket</h3>
             <h3>General Admission</h3>

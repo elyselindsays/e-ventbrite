@@ -1,15 +1,7 @@
 import { fetch } from './csrf';
 
-/***************
-Write your initial state []
-
-Dispatch an action creator(TBD) passing the info from the backend
-Define the action creator with action definition(TBD)
-Define the action definition
-Write the case for the userReducer
-*********************/
-
 const SET_EVENTS = '/events/SET_EVENTS';
+const REGISTER = '/events/REGISTER';
 
 
 const setEvents = (payload) => ({
@@ -17,31 +9,48 @@ const setEvents = (payload) => ({
   payload
 });
 
+const registerTicket = (payload) => ({
+  type: REGISTER,
+  payload
+});
 
-/********** Define a thunk to hit a backend route(TBD) *******/
+
+
+/************ THUNK ACTION CREATORS ************ */
 
 export const getEvents = () => async (dispatch) => {
   const res = await fetch(`/api/events`);
-
-  console.log(`${res}******************************`)
-  console.log(Array.isArray(res.data));
   dispatch(setEvents(res.data));
-
 };
 
-// export const getOneEvent = (id) => async (dispatch) => {
-//   const res = await fetch(`/api/events/${id}`);
-//   dispatch(setEvents(res.data));
-// }
+
+export const register = (ticket) => async (dispatch) => {
+  const { eventId, userId } = ticket;
+  const res = await fetch(`/api/events/register`, {
+    method: 'post',
+    body: JSON.stringify({
+      eventId, userId
+    })
+  });
+  dispatch(registerTicket(res.data.ticket))
+  return res;
+};
+
+
 
 
 
 const eventReducer = (state = [], action) => {
+
   switch (action.type) {
     case SET_EVENTS:
       console.log(action.payload)
-      return [...action.payload]
+      return [...action.payload];
 
+    case REGISTER:
+      console.log(action.payload);
+
+      return state;
     default:
       return state;
   }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import './LoginForm.css';
+import picture from '../images/eventbrite.png';
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -22,11 +23,13 @@ function LoginForm() {
 
   return (
     <>
-      <div className='modal'>
+      <div className='login-modal'>
         <div className='headers'>
+          <div className='logo-container'>
 
-          <h1>Login</h1>
-          <p>Welcome back!</p>
+            <img src={picture} alt='logo'></img>
+          </div>
+          <div className='title'>Login</div>
         </div>
         <form onSubmit={handleSubmit}>
           <ul>
@@ -35,22 +38,17 @@ function LoginForm() {
             ))}
           </ul>
           <div className='inputFields'>
-            <div>
-              {/* <label> */}
-              {/* Username or Email */}
+            <div className='user-input'>
               <input
                 type="text"
                 placeholder='Username or Email'
                 value={credential}
                 onChange={(e) => setCredential(e.target.value)}
                 required
+                className='user-input input'
               />
-              {/* </label> */}
             </div>
-            <div>
-
-              {/* <label> */}
-              {/* Password */}
+            <div className='password-input input'>
               <input
                 type="password"
                 placeholder='Password'
@@ -58,10 +56,9 @@ function LoginForm() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              {/* </label> */}
             </div>
           </div>
-          <button type="submit" className='loginButton'>Log In</button>
+          <button type="submit" className='loginButton'>LOG IN</button>
         </form>
       </div>
     </>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 import './Navigation.css';
 
@@ -20,9 +21,9 @@ const TicketButton = () => {
   return (
     <>
       <div className='tickets' >
-        {/* <button className='ticketButton icon'> */}
-        <i className="fas fa-ticket-alt ticketButton" ></i>
-        {/* </button> */}
+        <NavLink className='ticketButton icon'>
+          <i className="fas fa-ticket-alt ticketButton" ></i>
+        </NavLink>
       </div>
     </>
   )

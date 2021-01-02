@@ -21,10 +21,7 @@ const LikeButton = () => {
     <>
 
       <div className='icon-container likes navbar' >
-        {/* <a className='likeButton icon'> */}
         <i className="far fa-heart likeButton" ></i>
-        {/* </a> */}
-        {/* </button> */}
       </div>
     </>
   )

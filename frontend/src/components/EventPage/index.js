@@ -11,9 +11,7 @@ const EventPage = () => {
   // render that
 
   const eventState = useSelector((state) => state.event);
-
   const { id } = useParams();
-
   const foundEvent = eventState.find(ev => ev.id === Number(id))
 
 
