@@ -20,11 +20,9 @@ const validateLogin = [
   handleValidationErrors
 ];
 
-// 'yXVXaOS8-haV77efCxnCreZEnbyyqnQh1Dco'
 
 router.post('/', validateLogin, asyncHandler(async (req, res, next) => {
   const { credential, password } = req.body;
-
   const user = await User.login({ credential, password });
 
   if (!user) {
@@ -36,11 +34,9 @@ router.post('/', validateLogin, asyncHandler(async (req, res, next) => {
   }
 
   await setTokenCookie(res, user);
-
-  return res.json({
-    user
-  })
+  return res.json({ user })
 }));
+
 
 // Restore Session User
 router.get('/', restoreUser, (req, res) => {
@@ -51,6 +47,9 @@ router.get('/', restoreUser, (req, res) => {
     });
   } else return res.json({});
 });
+
+
+
 
 
 // Log out
