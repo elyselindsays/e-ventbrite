@@ -51,13 +51,13 @@ module.exports = (sequelize, DataTypes) => {
 
 
   User.associate = function (models) {
-    const columnMapping = {
-      through: 'Ticket',
-      otherKey: 'eventId',
-      foreignKey: 'userId'
-    }
+    // const columnMapping = {
+    //   through: 'Ticket',
+    //   otherKey: 'eventId',
+    //   foreignKey: 'userId'
+    // }
 
-    User.belongsToMany(models.Event, columnMapping)
+    User.hasMany(models.Ticket, { foreignKey: 'userId' })
   };
 
 
