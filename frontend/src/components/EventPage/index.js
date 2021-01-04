@@ -7,10 +7,6 @@ import './EventPage.css';
 
 const EventPage = () => {
 
-  // useParams to get id from state
-  // setup route to eventpage
-  // find the one with the right id
-  // render that
 
   const eventState = useSelector((state) => state.event);
   const user = useSelector((state) => state.session.user);
@@ -23,6 +19,8 @@ const EventPage = () => {
   const registered = tickets.filter(ticket => {
     return ticket.eventId === foundEvent.id;
   })
+
+
 
   const registeredFragment = (
     <>
@@ -51,8 +49,12 @@ const EventPage = () => {
       bookmark: true
     }
     await dispatch(like(payload))
+    console.log(e.target.style)
+
 
   }
+
+
 
 
   return (
@@ -72,12 +74,12 @@ const EventPage = () => {
               <div id='date'>{foundEvent.date}</div>
             </div>
             <div className='registerButton'>
-              {registered && registeredFragment}
-              {!registered && <Link to={`/events/${foundEvent.id}/register`}>
+              {registered.length > 0 && registeredFragment}
+              {registered.length === 0 && <Link to={`/events/${foundEvent.id}/register`}>
                 <button className='event-button'>Register</button>
               </Link>}
-              {liked && likedFragment}
-              {!liked && <button onClick={clickLike} className='event-button'>Like</button>}
+              {liked.length > 0 && likedFragment}
+              {liked.length === 0 && <button onClick={clickLike} className='event-button'>Like</button>}
 
             </div>
 

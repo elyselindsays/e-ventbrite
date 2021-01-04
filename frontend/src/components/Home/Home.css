@@ -1,7 +1,7 @@
 #home-page-container {
   /* background-color: aquamarine; */
-  height: 400px;
-  position: relative;
+  /* height: 400px; */
+
   padding: 20px;
   display: flex;
   
@@ -11,10 +11,22 @@
   display: flex;
 align-self: flex-end;
 width: 100%;
+padding: 100px;
   
 }
 
+h2 {
+  padding: 20px;
+}
 
+
+#arrow {
+  width: 11px;
+ }
+
+ .browse-button {
+   width: 25px
+ }
 
 
 .home-photo-container {
@@ -22,25 +34,10 @@ width: 100%;
 
 }
 
-
 #home-page-container img {
   width: 100%;
 }
-/* 
-#home-page-overlay {
-  height: 400px;
-  width: 100%;
-  background: rgb(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 
-#home-page-overlay h1 {
-  color: white;
-  font-size: 48px;
-  margin-right: 50px;
-} */
+h1 {
+  padding-top: 38px
+}

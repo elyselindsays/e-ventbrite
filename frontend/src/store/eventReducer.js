@@ -62,8 +62,9 @@ const eventReducer = (state = [], action) => {
       return [...action.payload];
 
     case REGISTER:
-
-      return [...state, ...action.payload]
+      let newState = [...state];
+      newState.push(action.payload)
+      return newState;
 
     default:
       return state;

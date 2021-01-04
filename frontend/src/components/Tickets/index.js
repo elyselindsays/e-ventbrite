@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getMyTickets } from "../../store/ticketReducer";
@@ -21,13 +21,12 @@ const MyTickets = () => {
 
 
 
-
   return (
     <div id='my-tickets'>
       <h2>My Tickets</h2>
       <div className='card-container' >
         {myTickets.map((ticket) => (
-          <div className='card' id={ticket.Event.id}>
+          <div className='card' id={ticket.Event.id} key={ticket.Event.id}>
             <div className='card-image'>
               <Link to={`/events/${ticket.Event.id}`}>
                 <img className='card-image' src={ticket.Event.image} alt='event' />

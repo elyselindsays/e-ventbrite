@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { register } from '../../store/eventReducer'
@@ -7,7 +7,7 @@ const Registration = () => {
 
   const eventState = useSelector((state) => state.event);
   const userState = useSelector((state) => state.session);
-  const ticketState = useSelector((state) => state.tickets);
+  // const ticketState = useSelector((state) => state.tickets);
   const dispatch = useDispatch();
   const history = useHistory();
   const { id } = useParams();

@@ -17,7 +17,7 @@ export const getMyTickets = () => async (dispatch) => {
 
 
 const ticketReducer = (state = [], action) => {
-  let newState;
+
   switch (action.type) {
     case SET_MY_TICKETS:
       console.log(action.payload)

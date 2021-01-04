@@ -22,10 +22,10 @@ const EventBrowse = () => {
       {sessionUser &&
         <div id='browse-page'>
 
-          <h1 >Explore E-vents</h1>
+          <h1 >e-xplore e-vents</h1>
           <div className='card-container' >
             {events.map((event) => (
-              <div className='card' id={event.id}>
+              <div className='card' id={event.id} key={event.id}>
                 <div className='card-image'>
                   <Link to={`/events/${event.id}`}>
                     <img className='card-image' src={event.image} alt='event' />
@@ -34,7 +34,7 @@ const EventBrowse = () => {
                 <div className='info-container'>
                   <Link to={`/events/${event.id}`}>
                     <div id='event-title'>{event.title}</div>
-                    <div id='event-date'>{event.date}</div>
+                    <p id='event-date'>{event.date}</p>
                   </Link>
                 </div>
               </div>
