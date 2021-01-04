@@ -1,7 +1,10 @@
+import Create from '../components/Create';
 import { fetch } from './csrf';
 
 const SET_EVENTS = '/events/SET_EVENTS';
 const REGISTER = '/events/REGISTER';
+const CREATE = '/events/CREATE';
+const UNLIKE = '/events/UNLIKE'
 
 
 const setEvents = (payload) => ({
@@ -14,7 +17,14 @@ const registerTicket = (payload) => ({
   payload
 });
 
+const create = (payload) => ({
+  type: CREATE,
+  payload
+})
 
+const removeLike = () => ({
+  type: UNLIKE
+})
 
 /************ THUNK ACTION CREATORS ************ */
 
@@ -22,6 +32,27 @@ export const getEvents = () => async (dispatch) => {
   const res = await fetch(`/api/events`);
   dispatch(setEvents(res.data));
 };
+
+export const unlike = () => async (dispatch) => {
+  const res = await fetch(`/api/events/unlike`, {
+    method: 'DELETE'
+  });
+  dispatch(removeLike())
+  return res;
+}
+
+export const createEvent = (event) => async (dispatch) => {
+  const { title, date, description } = event;
+  const res = await fetch(`/api/events/create`, {
+    method: 'post',
+    body: JSON.stringify({
+      title, date, description
+
+    })
+  })
+  dispatch(create(res.data.event))
+  return res;
+}
 
 
 export const register = (ticket) => async (dispatch) => {
@@ -56,15 +87,23 @@ export const like = (like) => async (dispatch) => {
 
 const eventReducer = (state = [], action) => {
 
+  let newState;
   switch (action.type) {
     case SET_EVENTS:
 
       return [...action.payload];
 
     case REGISTER:
-      let newState = [...state];
+      newState = [...state];
       newState.push(action.payload)
       return newState;
+    case CREATE:
+      let newerState = [...state];
+      newerState.push(action.payload);
+      return newerState;
+    case UNLIKE:
+
+
 
     default:
       return state;

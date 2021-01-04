@@ -14,18 +14,22 @@ const MyTickets = () => {
 
 
 
+
+
   useEffect(() => {
     dispatch(getMyTickets());
   }, [dispatch]);
 
 
-
+  const tickets = myTickets.filter(ticket => {
+    return (!ticket.bookmark)
+  })
 
   return (
     <div id='my-tickets'>
       <h2>My Tickets</h2>
       <div className='card-container' >
-        {myTickets.map((ticket) => (
+        {tickets.map((ticket) => (
           <div className='card' id={ticket.Event.id} key={ticket.Event.id}>
             <div className='card-image'>
               <Link to={`/events/${ticket.Event.id}`}>

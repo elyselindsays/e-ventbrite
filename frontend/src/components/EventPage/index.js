@@ -17,7 +17,7 @@ const EventPage = () => {
 
 
   const registered = tickets.filter(ticket => {
-    return ticket.eventId === foundEvent.id;
+    return (ticket.eventId === foundEvent.id && ticket.bookmark !== true);
   })
 
 
@@ -37,7 +37,7 @@ const EventPage = () => {
 
   const likedFragment = (
     <>
-      <p>Liked!</p>
+      <button className='liked'>Unlike</button>
     </>
   )
 
@@ -49,12 +49,13 @@ const EventPage = () => {
       bookmark: true
     }
     await dispatch(like(payload))
-    console.log(e.target.style)
-
-
+    e.target.style.backgroundColor = 'purple';
   }
 
-
+  // const unlike = async (e) => {
+  //   await dispatch(unlike());
+  //   e.target.innerHTML = 'Like'
+  // }
 
 
   return (

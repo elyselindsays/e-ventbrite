@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import MyTickets from './components/Tickets';
 import Confirmation from './components/Registration/confirmation';
 import Likes from "./components/Tickets/Likes";
+import Create from "./components/Create";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/likes">
             <Likes />
+          </Route>
+          <Route path="/create">
+            <Create />
           </Route>
           <Route exact path={`/events/:id/register`}>
             <Registration />

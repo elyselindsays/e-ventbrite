@@ -18,11 +18,15 @@ const Home = () => {
       <div id='home-page-container'>
         <div className='home-card'>
           <div className='home-card-text-container'>
-            <h2>Connect through online events</h2>
-            <div className='browse-button'>Browse Events
-              <Link to='/events'>
-                <img id='arrow' src="https://img.icons8.com/ios/50/000000/right--v1.png" alt='arrow' />
-              </Link>
+            <h2>Connect through</h2>
+            <h1>online events</h1>
+            <div className='browse-button'>
+              <button>Browse Events
+                <Link to='/events'>
+                  <img id='arrow' src="https://img.icons8.com/ios/50/000000/right--v1.png" alt='arrow' />
+                </Link>
+
+              </button>
             </div>
           </div>
           <div className='home-photo-container'>

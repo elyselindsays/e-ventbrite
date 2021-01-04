@@ -4,7 +4,7 @@
 
   padding: 20px;
   display: flex;
-  
+  background-color: rgb(226, 241, 243)
 }
 
 .home-card {
@@ -16,7 +16,7 @@ padding: 100px;
 }
 
 h2 {
-  padding: 20px;
+  padding: 10px;
 }
 
 

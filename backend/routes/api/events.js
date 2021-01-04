@@ -40,7 +40,12 @@ router.post(`/like`, asyncHandler(async (req, res) => {
   res.json(ticket);
 }));
 
-
+router.post('/create', asyncHandler(async (req, res) => {
+  const event = await Event.create({
+    title, date, description
+  });
+  res.json(event)
+}))
 
 
 router.get(`/my-tickets`, requireAuth, asyncHandler(async (req, res) => {

@@ -26,7 +26,7 @@ const Likes = () => {
       <div className='card-container' >
         {!likes && <h4>No Likes Yet!</h4>}
         {likes.map((like) => (
-          <div className='card' id={like.id}>
+          <div className='card' key={like.id} id={like.id}>
             <div className='card-image'>
               <Link to={`/events/${like.Event.id}`}>
                 <img className='card-image' src={like.Event.image} alt='event' />
