@@ -21,6 +21,15 @@ function LoginForm() {
 
   };
 
+  const submitDemo = (e) => {
+    return dispatch(sessionActions.login({ credential: 'demo', password: 'password' })).catch(
+      (res) => {
+        if (res.data && res.data.errors) setErrors(res.data.errors);
+      }
+    );
+
+  }
+
   return (
     <>
       <div className='login-modal'>
@@ -59,6 +68,7 @@ function LoginForm() {
             </div>
           </div>
           <button type="submit" className='loginButton'>LOG IN</button>
+          <button onClick={submitDemo} className='loginButton'>DEMO LOG IN</button>
         </form>
       </div>
     </>
