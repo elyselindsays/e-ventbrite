@@ -44,8 +44,9 @@ const ProfileButton = ({ user }) => {
     <>
 
       <div className='profileContainer dropdown' >
-        <div className='profileButton icon' onClick={openMenu}>
-          <img src="https://img.icons8.com/dusk/100/000000/test-account.png" alt='profile' />
+        <div className='profileButton icon-square-container' onClick={openMenu}>
+          <img className='icon' src="https://img.icons8.com/ios/50/000000/user-menu-male.png" alt='profile' />
+          <h3 className='navbar-links'>{user.email}</h3>
         </div>
         {showMenu && (
           <ul className="dropdown">

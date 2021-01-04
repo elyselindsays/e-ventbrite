@@ -7,34 +7,25 @@ const Registration = () => {
 
   const eventState = useSelector((state) => state.event);
   const userState = useSelector((state) => state.session);
+  const ticketState = useSelector((state) => state.tickets);
   const dispatch = useDispatch();
   const history = useHistory();
   const { id } = useParams();
   const foundEvent = eventState.find(ev => ev.id === Number(id))
 
-  console.log(userState)
-  console.log(foundEvent)
-  console.log(userState.user.id);
-  console.log(foundEvent.id)
-
-
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    /******************* THIS MIGHT BE WRONG ***********/
     const payload = {
       eventId: foundEvent.id,
       userId: userState.user.id
     }
     const ticket = await dispatch(register(payload));
-    // if (ticket) {
-    //   history.push(`/events/confirmation`)
-    // }
+    if (ticket) {
+      history.push(`/events/${id}/confirmation`)
+    }
   };
-
-  // const toRender = 
-
 
 
   return (

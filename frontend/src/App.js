@@ -10,6 +10,7 @@ import Registration from './components/Registration';
 import Home from "./components/Home";
 import MyTickets from './components/Tickets';
 import Confirmation from './components/Registration/confirmation';
+import Likes from "./components/Tickets/Likes";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,9 @@ function App() {
           <Route path="/tickets">
             <MyTickets />
           </Route>
+          <Route path="/likes">
+            <Likes />
+          </Route>
           <Route exact path={`/events/:id/register`}>
             <Registration />
           </Route>
@@ -41,7 +45,7 @@ function App() {
           <Route exact path='/events'>
             <EventBrowse />
           </Route>
-          <Route exact path='/events/confirmation'>
+          <Route exact path='/events/:id/confirmation'>
             <Confirmation />
           </Route>
         </>

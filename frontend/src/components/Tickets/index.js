@@ -16,37 +16,34 @@ const MyTickets = () => {
 
   useEffect(() => {
     dispatch(getMyTickets());
-  }, [dispatch])
+  }, [dispatch]);
+
+
+
 
 
   return (
     <div id='my-tickets'>
       <h2>My Tickets</h2>
-
       <div className='card-container' >
         {myTickets.map((ticket) => (
-          <div className='card' id={ticket.id}>
+          <div className='card' id={ticket.Event.id}>
             <div className='card-image'>
-              {/* <Link to={`/events/${event.id}`}> */}
-              <img className='card-image' src={ticket.id} alt='event' />
-              {/* </Link> */}
+              <Link to={`/events/${ticket.Event.id}`}>
+                <img className='card-image' src={ticket.Event.image} alt='event' />
+              </Link>
             </div>
             <div className='info-container'>
-              {/* <Link to={`/events/${event.id}`}> */}
-              <div id='event-title'>{ticket.id}</div>
-              <div id='event-date'>{ticket.id}</div>
-              {/* </Link> */}
+              <Link to={`/events/${ticket.Event.id}`}>
+                <div id='event-title'>{ticket.Event.title}</div>
+                <div id='event-date'>{ticket.Event.date}</div>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-
-
     </div>
-
   )
-
-
 }
 
 

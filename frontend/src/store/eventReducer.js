@@ -38,19 +38,33 @@ export const register = (ticket) => async (dispatch) => {
 
 
 
+export const like = (like) => async (dispatch) => {
+  const { eventId, userId, bookmark } = like;
+  const res = await fetch(`/api/events/like`, {
+    method: 'post',
+    body: JSON.stringify({
+      eventId, userId, bookmark
+    })
+  });
+  dispatch(registerTicket(res.data.ticket))
+  return res;
+};
+
+
+
 
 
 const eventReducer = (state = [], action) => {
 
   switch (action.type) {
     case SET_EVENTS:
-      console.log(action.payload)
+
       return [...action.payload];
 
     case REGISTER:
-      console.log(action.payload);
 
-      return state;
+      return [...state, ...action.payload]
+
     default:
       return state;
   }

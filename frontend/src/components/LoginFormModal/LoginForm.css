@@ -62,25 +62,6 @@ body {
 }
 /* End Global rules */
 
-/* Start body rules */
-body {
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-background-attachment: fixed;
-  background-repeat: no-repeat;
-
-    font-family: 'Vibur', cursive;
-/*   the main font */
-    font-family: 'Abel', sans-serif;
-opacity: .95;
-/* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
-}
-
-
-
-/* |||||||||||||||||||||||||||||||||||||||||||||*/
-/* //////////////////////////////////////////// */
-
 
 
 
@@ -119,7 +100,7 @@ header {
 /* Login title form form */
 header h2 {
     font-size: 250%;
-    font-family: 'Playfair Display', serif;
+
     color: #3e403f;
 }
 /*  A welcome message or an explanation of the login form */
@@ -167,7 +148,7 @@ input[class="form-input"]{
     padding: 15px;
     
     font-size: 16px;
-    font-family: 'Abel', sans-serif;
+    /* font-family: 'Abel', sans-serif; */
     color: #5E6472;
   
     outline: none;

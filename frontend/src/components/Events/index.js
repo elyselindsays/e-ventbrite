@@ -8,38 +8,40 @@ import './Events.css';
 
 const EventBrowse = () => {
   const events = useSelector((state) => state.event);
+  const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
-  const handleClick = (e) => {
-    // dispatch(getOneEvent(e.target.id))
-  }
+
 
   useEffect(() => {
     dispatch(getEvents());
   }, [dispatch])
 
+
   return (
     <>
-      <div id='browse-page'>
+      {sessionUser &&
+        <div id='browse-page'>
 
-        <h1 >Explore E-vents</h1>
-        <div className='card-container' >
-          {events.map((event) => (
-            <div className='card' id={event.id}>
-              <div className='card-image'>
-                <Link to={`/events/${event.id}`}>
-                  <img className='card-image' src={event.image} alt='event' />
-                </Link>
+          <h1 >Explore E-vents</h1>
+          <div className='card-container' >
+            {events.map((event) => (
+              <div className='card' id={event.id}>
+                <div className='card-image'>
+                  <Link to={`/events/${event.id}`}>
+                    <img className='card-image' src={event.image} alt='event' />
+                  </Link>
+                </div>
+                <div className='info-container'>
+                  <Link to={`/events/${event.id}`}>
+                    <div id='event-title'>{event.title}</div>
+                    <div id='event-date'>{event.date}</div>
+                  </Link>
+                </div>
               </div>
-              <div className='info-container'>
-                <Link to={`/events/${event.id}`}>
-                  <div id='event-title'>{event.title}</div>
-                  <div id='event-date'>{event.date}</div>
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      }
     </>
   );
 }

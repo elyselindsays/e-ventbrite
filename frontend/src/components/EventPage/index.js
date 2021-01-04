@@ -2,6 +2,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { like } from '../../store/eventReducer';
+import './EventPage.css';
 
 const EventPage = () => {
 
@@ -11,54 +13,94 @@ const EventPage = () => {
   // render that
 
   const eventState = useSelector((state) => state.event);
+  const user = useSelector((state) => state.session.user);
+  const tickets = useSelector((state) => state.tickets);
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const foundEvent = eventState.find(ev => ev.id === Number(id))
+  const foundEvent = eventState.find(ev => ev.id === Number(id));
 
 
-  console.log(eventState);
-  console.log(id);
+  const registered = tickets.filter(ticket => {
+    return ticket.eventId === foundEvent.id;
+  })
 
-  // TO-DO: function that "finds" the object in the eventState array where the id equals the id param
+  const registeredFragment = (
+    <>
+      <p>Registered!</p>
+    </>
+  )
+
+  const liked = tickets.filter(ticket => {
+    if (ticket.bookmark === true) {
+      return ticket.eventId === foundEvent.id;
+    } else return null;
+  })
+
+
+  const likedFragment = (
+    <>
+      <p>Liked!</p>
+    </>
+  )
+
+
+  const clickLike = async (e) => {
+    const payload = {
+      eventId: foundEvent.id,
+      userId: user.id,
+      bookmark: true
+    }
+    await dispatch(like(payload))
+
+  }
 
 
   return (
     <>
-      <h1>Event Page</h1>
-      <div className='eventHero'>
 
-        <div key={foundEvent.id} className='event-page'>
-          <div className='photoBlock'>
-            <img src={foundEvent.image} className='photo' alt='event'></img>
+      <div key={foundEvent.id} className='event-page'>
+        <div className='event-header'>
+          <div className='event-photo-container'>
+            <img src={foundEvent.image} className='event-page-photo' alt='event'></img>
           </div>
-          <div>
-            <h1 className='eventTitle'>{foundEvent.title}</h1>
+          <div className='event-text'>
+
+            <div id='event-title'>
+              <h1 className='event-title'>{foundEvent.title}</h1>
+            </div>
+            <div className='dateBlock'>
+              <div id='date'>{foundEvent.date}</div>
+            </div>
+            <div className='registerButton'>
+              {registered && registeredFragment}
+              {!registered && <Link to={`/events/${foundEvent.id}/register`}>
+                <button className='event-button'>Register</button>
+              </Link>}
+              {liked && likedFragment}
+              {!liked && <button onClick={clickLike} className='event-button'>Like</button>}
+
+            </div>
+
           </div>
-          <div className='dateBlock'>
-            <div id='date'>{foundEvent.date}</div>
-            <div id='time'>{foundEvent.date}</div>
-          </div>
-        </div>
-
-        {/* Register Button */}
-        <div className='registerButton'>
-          <Link to={`/events/${foundEvent.id}/register`}>
-            <button>Register</button>
-          </Link>
-        </div>
-
-        {/* Description Block */}
-        <div className="descriptionBox">
-          <h3>About this Event</h3>
-          <p>{foundEvent.description}</p>
-        </div>
-
-
-
-        {/* Tags */}
-        <div className='tagsContainer'>
-          {/* tag links */}
         </div>
       </div>
+
+      {/* Register Button */}
+
+
+      {/* Description Block */}
+      <div className="descriptionBox">
+        <h3>About this Event</h3>
+        <p>{foundEvent.description}</p>
+      </div>
+
+
+
+      {/* Tags */}
+      <div className='tagsContainer'>
+        {/* tag links */}
+      </div>
+
 
 
 
