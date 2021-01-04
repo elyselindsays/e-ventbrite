@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     // }
 
     Event.hasMany(models.Ticket, { foreignKey: 'eventId' })
+    Event.hasMany(models.EventTag, { foreignKey: 'eventId' })
   };
   return Event;
 };

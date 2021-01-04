@@ -6,9 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   EventTag.associate = function (models) {
 
-    // TO DO!!!! ASSOCIATIONS FOR 
-    // EVENTID
-    // TAGID
+
 
     EventTag.belongsTo(models.Event, { foreignKey: 'eventId' });
     EventTag.belongsTo(models.Tag, { foreignKey: 'tagId' });
