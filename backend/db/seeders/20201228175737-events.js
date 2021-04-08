@@ -53,6 +53,102 @@ module.exports = {
         description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
         image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
       },
+      {
+        title: 'Cultivate Compassion in the Wake of Anti-Asian Violence',
+        date: '2021-04-18 20:00:00',
+        description: 'Focusing on health justice, three acupuncturists explore anti-Asian policies, micro- and macro-aggressions, and systematic racism in academic institutions, professional organizations, and the health and wellness space.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F129643509%2F438776807040%2F1%2Foriginal.20210319-183735?w=1024&auto=format%2Ccompress&q=75&sharp=10&s=5da34f39a1690251c1dbaef7ba7daf05'
+      },
+      {
+        title: 'Poetry & the Creative Mind — Virtual Gala Supporting National Poetry Month',
+        date: '2021-01-9 16:00:00',
+        description: "Each year during National Poetry Month, now in its 25th year, the Academy of American Poets presents a gala celebration of poetry's important place in our culture, and its impact on the lives of readers and artists working in other disciplines. For the first time, in 2021, Poetry & the Creative Mind will be presented free and virtually.",
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124469125%2F27518352441%2F1%2Foriginal.20210128-174018?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=8c304468ffbc6af43b932fecc2c548fe'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
+      {
+        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        date: '2021-01-8 20:00:00',
+        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+      },
 
 
 

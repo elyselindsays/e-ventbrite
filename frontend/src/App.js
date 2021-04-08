@@ -30,6 +30,7 @@ function App() {
           </Route>
           <Route exact path="/">
             <Home />
+            <EventBrowse />
           </Route>
           <Route path="/tickets">
             <MyTickets />

@@ -19,29 +19,29 @@ const EventBrowse = () => {
 
   return (
     <>
-      {sessionUser &&
-        <div id='browse-page'>
+      {/* {sessionUser && */}
+      <div id='browse-page'>
 
-          <h1 >e-xplore e-vents</h1>
-          <div className='card-container' >
-            {events.map((event) => (
-              <div className='card' id={event.id} key={event.id}>
-                <div className='card-image'>
-                  <Link to={`/events/${event.id}`}>
-                    <img className='card-image' src={event.image} alt='event' />
-                  </Link>
-                </div>
-                <div className='info-container'>
-                  <Link to={`/events/${event.id}`}>
-                    <div id='event-title'>{event.title}</div>
-                    <p id='event-date'>{event.date}</p>
-                  </Link>
-                </div>
+        <h1 className="text-head">Popular in Online Events</h1>
+        <div className='card-container' >
+          {events.map((event) => (
+            <div className='card' id={event.id} key={event.id}>
+              <div className='card-image'>
+                <Link to={`/events/${event.id}`}>
+                  <img className='card-image' src={event.image} alt='event' />
+                </Link>
               </div>
-            ))}
-          </div>
+              <div className='info-container'>
+                <Link to={`/events/${event.id}`}>
+                  <div id='event-title'>{event.title}</div>
+                  <p id='event-date'>{event.date}</p>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
-      }
+      </div>
+      {/* } */}
     </>
   );
 }
