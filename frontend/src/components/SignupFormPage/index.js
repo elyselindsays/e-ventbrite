@@ -42,24 +42,31 @@ const SignupFormPage = () => {
   // Make sure to handle and display errors from the signup thunk action if there are any.If the confirm password is not the same as the password, display an error message for this.
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, i) => <li key={i}>{error}</li>)}
-      </ul>
-      <label>Username
-        <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} required />
-      </label>
-      <label>Email
-        <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </label>
-      <label>Password
-        <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
-      <label>Confirm Password
-        <input type='password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-      </label>
-      <button type="submit">Sign Up</button>
-    </form>
+    <div>
+      <h1>Welcome</h1>
+      <h3 className="subhead">Create an account.</h3>
+      <form onSubmit={handleSubmit}>
+        <ul>
+          {errors.map((error, i) => <li key={i}>{error}</li>)}
+        </ul>
+        {/* <label>Username */}
+        <div className="login-form">
+
+          <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" required />
+          {/* </label> */}
+          {/* <label>Email */}
+          <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+          {/* </label> */}
+          {/* <label>Password */}
+          <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
+          {/* </label> */}
+          {/* <label>Confirm Password */}
+          <input type='password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" required />
+          {/* </label> */}
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
   )
 
 

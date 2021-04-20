@@ -50,12 +50,10 @@ function Navigation({ isLoaded }) {
     );
   } else {
     sessionLinks = (
-      <>
-        <LoginFormModal />
-        <NavLink to="/signup">
-          <button>Sign Up</button>
-        </NavLink>
-      </>
+      <div className="loggedout">
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/signup">Sign Up</NavLink>
+      </div>
     );
   }
 

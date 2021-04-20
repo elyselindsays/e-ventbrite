@@ -59,3 +59,8 @@ align-self: center;
 .icon-square-container:hover {
   background-color: #dbdae3;
 }
+
+.loggedout {
+  display: flex;
+  
+}

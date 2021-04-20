@@ -12,6 +12,7 @@ import MyTickets from './components/Tickets';
 import Confirmation from './components/Registration/confirmation';
 import Likes from "./components/Tickets/Likes";
 import Create from "./components/Create";
+import LoginForm from "./components/LoginFormModal/LoginForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,9 @@ function App() {
         <>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path="/login">
+            <LoginForm />
           </Route>
           <Route exact path="/">
             <Home />

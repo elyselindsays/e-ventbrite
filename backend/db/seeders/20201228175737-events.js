@@ -66,64 +66,64 @@ module.exports = {
         image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124469125%2F27518352441%2F1%2Foriginal.20210128-174018?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=8c304468ffbc6af43b932fecc2c548fe'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'The TFD Spring Refresh',
+        date: '2021-03-8 12:00:00',
+        description: 'For this ultimate spring cleaning season, TFD is bringing you a half-day crash course in revamping each element of your life to be organized, streamlined, and stress-free. From your home to your wardrobe to your kitchen, you deserve to live a life that is thoughtful and intentional, while getting rid of the clutter that drags you down.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124247053%2F223901959787%2F1%2Foriginal.20210126-194102?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=1e00e9d3df6da3e1610bb78839fc23f9'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'The 2nd Annual National Antiracist Book Festival',
+        date: '2021-01-10 10:00:00',
+        description: 'On Saturday, April 24, 2021, Boston University’s Center for Antiracist Research will host the 2nd Annual National Antiracist Book Festival. This event will be held virtually to protect the safety of our community.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F97318832%2F244126536710%2F1%2Foriginal.20200325-143452?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C278%2C1080%2C540&s=ebefadaa61fd264858900c84e7e76b11'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'National Geographic Traveller: The Masterclasses online',
+        date: '2021-01-6 10:00:00',
+        description: 'For one-hour a day, over three days, the National Geographic Traveller team will provide a series of stimulating workshops and lectures that illuminate the art of written and visual storytelling. Not only will these in-depth courses be led by the magazine’s senior editors, renowned contributors and brand ambassadors they will also bring together published photographers and expert art directors.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F127108921%2F164866257512%2F1%2Foriginal.20210224-164223?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=0a248047dc9079be1de56b624849b2c1'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'Teacher Tech Summit',
+        date: '2021-01-17 08:00:00',
+        description: 'The global pandemic has demonstrated the need for schools to adopt and adapt new practices to ensure our children continue to receive a high-quality education.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F123385025%2F504027225927%2F1%2Foriginal.20210117-173319?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=62009fb849d16e63d4505b7e470350a2'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'John Waters - in Conversation - Live Zoom Talk',
+        date: '2021-01-18 15:00:00',
+        description: 'Legendary Film Director, Artist & Author in Conversation, by zoom, with Viktor Wynd',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F127109957%2F178030319390%2F1%2Foriginal.20210224-165051?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C130%2C6720%2C3360&s=3156d07c7540144c7cafbc1075fd8392'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'Health and Happiness Workshop',
+        date: '2021-01-19 13:00:00',
+        description: 'The pandemic environment, personal problems and work pressure take a toll on our body and mind. The Art of Living brings you this free holistic and integrated workshop called the Health and Happiness which provide unique tools and techniques which help combat stress accumulated in our daily, modern life.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F113007895%2F464627700405%2F1%2Foriginal.20200929-132616?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C115%2C1274%2C637&s=565e2e572e9e5c65f03421ff9cb75bb8'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'Inaugural David Cooper Lecture | Dr Anthony S. Fauci',
+        date: '2021-01-14 10:00:00',
+        description: 'As the world struggles to emerge from the COVID-19 pandemic, Dr Anthony S. Fauci sits down with Tegan Taylor, co-host of the ABC’s Coronacast, to discuss the past, the present and the future - from what we learned from the HIV/AIDS epidemic to what the ongoing impact of COVID-19 will be.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F129588697%2F243879337343%2F1%2Foriginal.20210319-094613?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=333cce4f4ae0f5465224efc5d3bec00e'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'Baking from Scratch 101',
+        date: '2021-01-6 15:00:00',
+        description: "Formerly known as Puff Pastry 101, we've shifted to include fun baking projects of all kinds! Bring a friend and join us on Instagram Live!",
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124377153%2F199607744421%2F1%2Foriginal.20210127-210812?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=1%2C0%2C620%2C310&s=02f65d1569df56733968c8741147a40b'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
-        date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        title: 'Gentle Yoga for Terrible Times',
+        date: '2021-01-10 21:00:00',
+        description: 'Human beings are not meant to be in constant fight or flight mode. Chronic stress takes a devastating toll on our mental and physical well-being. If you are exhausted, stressed out, burnt out, or just looking to relax and nourish your mind, body, and spirit, please join me for an hour of gentle yoga.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F102422544%2F11448527615%2F1%2Foriginal.20200602-034626?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C1130%2C3024%2C1512&s=2047b5ac763391ccc7b83a80cbe3e7a8'
       },
       {
-        title: 'Elvis Presley 86th Birthday: Livestream Music History Program',
+        title: "The Antidote: Women's Circle",
         date: '2021-01-8 20:00:00',
-        description: 'This is a musical history program where we will provide the historical context of various topics with an emphasis on pop culture (as opposed to music theory) including selected video recordings from various artists. The historical items will be provided via pictures and video so viewing the presentation on- screen is recommended, but you are also free to just listen to the music via audio - only.',
-        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121237043%2F37309396322%2F1%2Foriginal.20201218-041532?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C600%2C300&s=43e43355105fc31bdff6f233dd15493a'
+        description: 'The Antidote: Women’s Circle is a virtual event that uses meditation and reflection to help women gracefully navigate today’s world.',
+        image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128817393%2F4115290788%2F1%2Foriginal.20210312-002028?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C800%2C400&s=4e67085c98acdc63a7d8c4180251177c'
       },
       {
         title: 'Elvis Presley 86th Birthday: Livestream Music History Program',

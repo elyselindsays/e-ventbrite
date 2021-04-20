@@ -34,11 +34,8 @@ function LoginForm() {
     <>
       <div className='login-modal'>
         <div className='headers'>
-          <div className='logo-container'>
-
-            <img src={picture} alt='logo'></img>
-          </div>
-          <div className='title'>Login</div>
+          <h1>Welcome</h1>
+          <h3 className="subhead">Login to your account.</h3>
         </div>
         <form onSubmit={handleSubmit}>
           <ul>
