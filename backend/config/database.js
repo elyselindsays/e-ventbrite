@@ -10,6 +10,7 @@ module.exports = {
   development: {
     username,
     password,
+    logging: true,
     database,
     host,
     dialect: 'postgres',

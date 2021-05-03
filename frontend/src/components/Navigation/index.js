@@ -15,12 +15,6 @@ function Navigation({ isLoaded }) {
       <>
         <div id='icon-container'>
           <div className='icon-square-container'>
-            <NavLink to='/create'>
-              <img className='icon-image icon' src="https://img.icons8.com/ios/50/000000/plus-math.png" alt='create' />
-              <h3 className='navbar-links'>Create</h3>
-            </NavLink>
-          </div>
-          <div className='icon-square-container'>
             <NavLink to='/events'>
               <img className='icon-image icon' src="https://img.icons8.com/ios/50/000000/search--v1.png" alt='browse' />
               <h3 className='navbar-links'>Browse</h3>
