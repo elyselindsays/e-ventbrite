@@ -15,20 +15,20 @@ function Navigation({ isLoaded }) {
       <>
         <div id='icon-container'>
           <div className='icon-square-container'>
-            <NavLink to='/events'>
+            <NavLink to='/events' className='icon-square-container' >
               <img className='icon-image icon' src="https://img.icons8.com/ios/50/000000/search--v1.png" alt='browse' />
               <h3 className='navbar-links'>Browse</h3>
             </NavLink>
           </div>
           <div className='icon-square-container' >
-            <NavLink to='/tickets' >
+            <NavLink to='/tickets' className='icon-square-container' >
               <img className='ticket-button icon'
                 src="https://img.icons8.com/ios/50/000000/two-tickets.png" alt='tickets' />
               <h3 className='navbar-links'>Tickets</h3>
             </NavLink>
           </div>
           <div className='icon-square-container' >
-            <NavLink to='/likes' >
+            <NavLink to='/likes' className='icon-square-container'  >
               <img className='like-button icon'
                 src="https://img.icons8.com/ios/50/000000/like--v2.png" alt='heart' />
               <h3 className='navbar-links'>Likes</h3>

@@ -1,4 +1,3 @@
-import Create from '../components/Create';
 import { fetch } from './csrf';
 
 const SET_EVENTS = '/events/SET_EVENTS';
@@ -90,21 +89,16 @@ const eventReducer = (state = [], action) => {
   let newState;
   switch (action.type) {
     case SET_EVENTS:
-
       return [...action.payload];
-
     case REGISTER:
       newState = [...state];
-      newState.push(action.payload)
+      // newState.push(action.payload)
       return newState;
     case CREATE:
       let newerState = [...state];
       newerState.push(action.payload);
       return newerState;
-    case UNLIKE:
-
-
-
+    // case UNLIKE:
     default:
       return state;
   }

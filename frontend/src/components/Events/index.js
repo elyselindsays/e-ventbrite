@@ -14,17 +14,98 @@ const EventBrowse = () => {
 
   useEffect(() => {
     dispatch(getEvents());
-  }, [dispatch])
+  }, [dispatch]);
+
+  let datetime;
+  let baseTime;
+  let finalTime;
+
+
+
+  events.map(event => {
+
+    datetime = event.date;
+    console.log(datetime.split('-'));
+    let dateArr = datetime.split('-');
+
+    let [year, month, dayTime] = dateArr;
+
+    dayTime = dayTime.split('T');
+    console.log(dayTime);
+
+
+    switch (month) {
+      case "01":
+        month = "Jan";
+        break;
+      case "02":
+        month = "Feb";
+        break;
+      case "03":
+        month = "Mar";
+        break;
+      case "04":
+        month = "Apr";
+        break;
+      case "05":
+        month = "May";
+        break;
+      case "06":
+        month = "Jun";
+        break;
+      case "07":
+        month = "Jul";
+        break;
+      case "08":
+        month = "Aug";
+        break;
+      case "09":
+        month = "Sep";
+        break;
+      case "10":
+        month = "Oct";
+        break;
+      case "11":
+        month = "Nov";
+        break;
+      case "12":
+        month = "Dec";
+        break;
+
+      default:
+    };
+
+    let [dayDate, militaryTime] = dayTime;
+
+    baseTime = militaryTime.slice(0, 5);
+
+
+    console.log(baseTime)
+
+    let timeNum = baseTime.slice(0, 2);
+
+    if (timeNum < 12) {
+      finalTime = timeNum + "AM"
+
+    }
+
+
+
+
+
+    console.log(`${month} ${dayDate}, ${finalTime}`)
+
+
+
+  })
 
 
   return (
     <>
-      {/* {sessionUser && */}
       <div id='browse-page'>
-
         <h1 className="text-head">Popular in Online Events</h1>
         <div className='card-container' >
-          {events.map((event) => (
+          {events && events.map((event) => (
             <div className='card' id={event.id} key={event.id}>
               <div className='card-image'>
                 <Link to={`/events/${event.id}`}>
@@ -41,7 +122,6 @@ const EventBrowse = () => {
           ))}
         </div>
       </div>
-      {/* } */}
     </>
   );
 }

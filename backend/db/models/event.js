@@ -8,13 +8,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Event.associate = function (models) {
 
-
-    // const columnMapping = {
-    //   through: 'Ticket',
-    //   otherKey: 'userId',
-    //   foreignKey: 'eventId'
-    // }
-
     Event.hasMany(models.Ticket, { foreignKey: 'eventId' })
     Event.hasMany(models.EventTag, { foreignKey: 'eventId' })
   };

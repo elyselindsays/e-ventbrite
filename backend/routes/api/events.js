@@ -50,8 +50,6 @@ router.post('/create', asyncHandler(async (req, res) => {
 
 router.get(`/my-tickets`, requireAuth, asyncHandler(async (req, res) => {
 
-
-
   const { user } = req;
 
   if (user) {

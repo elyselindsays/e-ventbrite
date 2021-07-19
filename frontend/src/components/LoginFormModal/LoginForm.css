@@ -1,8 +1,9 @@
 input {
-  border-bottom: 1px solid magenta;
+  border-bottom: 1px solid rgb(243, 227, 243);
   border-top: none;
   border-left: none;
   border-right: none;
+  padding: 10px;
 }
 
 button:focus {

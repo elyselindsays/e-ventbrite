@@ -93,7 +93,7 @@ const EventPage = () => {
 
       {/* Description Block */}
       <div className="descriptionBox">
-        <h3>About this Event</h3>
+        <h3 className="about">About this Event</h3>
         <p>{foundEvent.description}</p>
       </div>
 

@@ -10,14 +10,13 @@
   box-shadow: black;
 }
 
-.event-page-photo {
-
-  
-
+.registerButton {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .event-text {
-  background-color: rgba(0, 255, 221, 0.37);
+  background-color: rgba(0, 255, 221, 0.97);
   padding: 15px;
 }
 
@@ -50,4 +49,18 @@
 }
 .register-button:active {
   background: rgb(96, 161, 161)
+}
+
+.event-button {
+  margin-top: 15px;
+}
+
+.dateBlock {
+  text-align: center;
+}
+
+.about {
+  padding-bottom: 25px;
+  font-size: 25px;
+  font-weight: 600;
 }
