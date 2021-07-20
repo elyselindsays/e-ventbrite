@@ -84,20 +84,17 @@ const EventBrowse = () => {
 
     let timeNum = baseTime.slice(0, 2);
 
+    console.log(timeNum)
+
     if (timeNum < 12) {
-      finalTime = timeNum + "AM"
-
+      finalTime = timeNum + (baseTime.slice(2, 5)) + "AM"
+    } else if (timeNum > 12) {
+      finalTime = (timeNum - 12) + (baseTime.slice(2, 5)) + "PM"
     }
-
-
-
-
 
     console.log(`${month} ${dayDate}, ${finalTime}`)
 
-
-
-  })
+  });
 
 
   return (
