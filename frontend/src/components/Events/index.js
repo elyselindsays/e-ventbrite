@@ -20,70 +20,69 @@ const EventBrowse = () => {
   let baseTime;
   let finalTime;
 
+  const eventDateTimeMapping = (
+    events.map(event => {
 
+      datetime = event.date;
+      console.log(datetime.split('-'));
+      let dateArr = datetime.split('-');
+      let [year, month, dayTime] = dateArr;
+      dayTime = dayTime.split('T');
 
-  events.map(event => {
+      switch (month) {
+        case "01":
+          month = "Jan";
+          break;
+        case "02":
+          month = "Feb";
+          break;
+        case "03":
+          month = "Mar";
+          break;
+        case "04":
+          month = "Apr";
+          break;
+        case "05":
+          month = "May";
+          break;
+        case "06":
+          month = "Jun";
+          break;
+        case "07":
+          month = "Jul";
+          break;
+        case "08":
+          month = "Aug";
+          break;
+        case "09":
+          month = "Sep";
+          break;
+        case "10":
+          month = "Oct";
+          break;
+        case "11":
+          month = "Nov";
+          break;
+        case "12":
+          month = "Dec";
+          break;
 
-    datetime = event.date;
-    console.log(datetime.split('-'));
-    let dateArr = datetime.split('-');
-    let [year, month, dayTime] = dateArr;
-    dayTime = dayTime.split('T');
+        default:
+      };
 
-    switch (month) {
-      case "01":
-        month = "Jan";
-        break;
-      case "02":
-        month = "Feb";
-        break;
-      case "03":
-        month = "Mar";
-        break;
-      case "04":
-        month = "Apr";
-        break;
-      case "05":
-        month = "May";
-        break;
-      case "06":
-        month = "Jun";
-        break;
-      case "07":
-        month = "Jul";
-        break;
-      case "08":
-        month = "Aug";
-        break;
-      case "09":
-        month = "Sep";
-        break;
-      case "10":
-        month = "Oct";
-        break;
-      case "11":
-        month = "Nov";
-        break;
-      case "12":
-        month = "Dec";
-        break;
+      let [dayDate, militaryTime] = dayTime;
+      baseTime = militaryTime.slice(0, 5);
+      let timeNum = baseTime.slice(0, 2);
 
-      default:
-    };
+      if (timeNum < 12) {
+        finalTime = timeNum + (baseTime.slice(2, 5)) + "AM"
+      } else if (timeNum > 12) {
+        finalTime = (timeNum - 12) + (baseTime.slice(2, 5)) + "PM"
+      }
 
-    let [dayDate, militaryTime] = dayTime;
-    baseTime = militaryTime.slice(0, 5);
-    let timeNum = baseTime.slice(0, 2);
+      console.log(`${month} ${dayDate}, ${finalTime}`)
 
-    if (timeNum < 12) {
-      finalTime = timeNum + (baseTime.slice(2, 5)) + "AM"
-    } else if (timeNum > 12) {
-      finalTime = (timeNum - 12) + (baseTime.slice(2, 5)) + "PM"
-    }
-
-    console.log(`${month} ${dayDate}, ${finalTime}`)
-
-  });
+    }));
 
 
   return (
@@ -100,8 +99,8 @@ const EventBrowse = () => {
               </div>
               <div className='info-container'>
                 <Link to={`/events/${event.id}`}>
-                  <div id='event-title'>{event.title}</div>
-                  <p id='event-date'>{event.date}</p>
+                  <div className="card-title" id='event-title'>{event.title}</div>
+                  <p className="card-date" id='event-date'>{event.date}</p>
                 </Link>
               </div>
             </div>
