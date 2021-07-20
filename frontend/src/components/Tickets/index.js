@@ -14,8 +14,6 @@ const MyTickets = () => {
 
 
 
-
-
   useEffect(() => {
     dispatch(getMyTickets());
   }, [dispatch]);

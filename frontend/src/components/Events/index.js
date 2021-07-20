@@ -27,12 +27,8 @@ const EventBrowse = () => {
     datetime = event.date;
     console.log(datetime.split('-'));
     let dateArr = datetime.split('-');
-
     let [year, month, dayTime] = dateArr;
-
     dayTime = dayTime.split('T');
-    console.log(dayTime);
-
 
     switch (month) {
       case "01":
@@ -76,15 +72,8 @@ const EventBrowse = () => {
     };
 
     let [dayDate, militaryTime] = dayTime;
-
     baseTime = militaryTime.slice(0, 5);
-
-
-    console.log(baseTime)
-
     let timeNum = baseTime.slice(0, 2);
-
-    console.log(timeNum)
 
     if (timeNum < 12) {
       finalTime = timeNum + (baseTime.slice(2, 5)) + "AM"

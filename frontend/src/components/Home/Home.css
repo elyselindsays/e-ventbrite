@@ -23,20 +23,27 @@ h2 {
 
 #arrow {
   width: 11px;
- }
+}
 
- .home-button {
-   display: flex;
-   align-items: center;
-       background-color: #d1410c;
-    background-color: #d1410c;
-    border-radius: 100px;
-    padding: 12px 16px 12px 18px;
-    color: #fff;
-    height: 64px;
-    font-weight: 600;
-    font-size: 16px;
- }
+.home-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d1410c;
+  background-color: #d1410c;
+  border-radius: 100px;
+  padding: 12px 16px 12px 18px;
+  color: #fff;
+  height: 64px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tixButtonText {
+  color: white;
+  padding-right: 9px;
+  
+}
 
 
 .home-photo-container {
