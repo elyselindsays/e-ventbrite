@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getEvents } from "../../store/eventReducer";
@@ -10,6 +10,7 @@ const EventBrowse = () => {
   const events = useSelector((state) => state.event);
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  const [adjustedTime, setAdjustedTime] = useState(null)
 
 
   useEffect(() => {
@@ -20,11 +21,9 @@ const EventBrowse = () => {
   let baseTime;
   let finalTime;
 
-  const eventDateTimeMapping = (
-    events.map(event => {
-
+  const eventDateTimeMapping = (event) => {
       datetime = event.date;
-      console.log(datetime.split('-'));
+
       let dateArr = datetime.split('-');
       let [year, month, dayTime] = dateArr;
       dayTime = dayTime.split('T');
@@ -80,9 +79,11 @@ const EventBrowse = () => {
         finalTime = (timeNum - 12) + (baseTime.slice(2, 5)) + "PM"
       }
 
+      
       console.log(`${month} ${dayDate}, ${finalTime}`)
+      setAdjustedTime(`${month} ${dayDate}, ${finalTime}`)
 
-    }));
+    };
 
 
   return (
@@ -90,7 +91,7 @@ const EventBrowse = () => {
       <div id='browse-page'>
         <h1 className="text-head">Popular in Online Events</h1>
         <div className='card-container' >
-          {events && events.map((event) => (
+          {events && events.map((event) =>  (
             <div className='card' id={event.id} key={event.id}>
               <div className='card-image'>
                 <Link to={`/events/${event.id}`}>
@@ -100,18 +101,17 @@ const EventBrowse = () => {
               <div className='info-container'>
                 <Link to={`/events/${event.id}`}>
                   <div className="card-title" id='event-title'>{event.title}</div>
-                  <p className="card-date" id='event-date'>{event.date}</p>
+                  <p className="card-date" id='event-date'>{finalTime}</p>
                 </Link>
               </div>
             </div>
-          ))}
+          ))
+          
+            }
         </div>
       </div>
     </>
-  );
-}
-
-
+  )};
 
 
 
